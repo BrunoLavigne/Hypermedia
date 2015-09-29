@@ -193,9 +193,10 @@ public class makeWebSite extends HttpServlet {
     private void loadCatalogue(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         try{
             if(request.getParameter("sessionSetter").equals("1")){
+                // Paramètres de la session
                 HttpSession session = request.getSession();
                 session.setAttribute("nom", request.getParameter("sessionName"));
-                session.setAttribute("age", request.getParameter("sessionAge"));
+                session.setAttribute("password", request.getParameter("sessionPassword"));
             }
         } catch (Exception e){
             System.err.println("old session");
@@ -249,6 +250,10 @@ public class makeWebSite extends HttpServlet {
 
     public void setCart(Cart cart) {
         this.cart = cart;
+    }
+    
+    private boolean checkLogin(String userName, String password){
+        return true;
     }
    
 }

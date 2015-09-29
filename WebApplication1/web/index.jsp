@@ -18,7 +18,7 @@
             <h1>Index</h1>
             <form action='makeWebSite' value='sessionName'>
                 <input type='text' placeholder='Inscrire votre nom' name='sessionName'>
-                <input type='text' placeholder='Inscrire votre age' name='sessionAge'>       
+                <input type='text' placeholder='Inscrire votre age' name='sessionPassword'>       
         
                 <%if(session.isNew()){ %>
                     <input type='hidden' name='sessionSetter' value='1'></input>
